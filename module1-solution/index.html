@@ -1,11 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html ng-app="lunchApp">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        .message {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
-    <h1>hello</h1>
+
+<body ng-app="lunchApp">
+    <div ng-controller="LunchController">
+        <h1>Lunch Checker</h1>
+
+        <div>
+            <input id="lunch-menu" type="text" ng-model="lunchmenu" placeholder="list of dishes (  comma separated ) you want  for lunch" >
+        </div>
+        <div>
+            <button  ng-click="splitLunch(lunchmenu)">Check If Too Much</button>
+        </div>
+        <div>
+            {{result}}
+        </div>
+    </div>
+
 </body>
+
+
 </html>
