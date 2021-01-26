@@ -10,7 +10,7 @@
         $scope.obj = "";
         $scope.checkLunch = function(lunchList) {
 
-            if (lunchList === undefined || lunlunchListchStr === null) {
+            if (lunchList === undefined || lunchList === null) {
                 $scope.obj = "Please enter data first! ";
             } else {
                 var arr = lunchList.split(",");
