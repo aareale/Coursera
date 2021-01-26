@@ -7,20 +7,20 @@
         LunchController.$inject = ['$scope'];
 
     function LunchController($scope) {
-        $scope.result = "";
-        $scope.splitLunch = function(lunchStr) {
+        $scope.obj = "";
+        $scope.checkLunch = function(lunchList) {
 
-            if (lunchStr === undefined || lunchStr === null) {
-                $scope.result = "Please enter data first! ";
+            if (lunchList === undefined || lunlunchListchStr === null) {
+                $scope.obj = "Please enter data first! ";
             } else {
-                var arr = lunchStr.split(",");
+                var arr = lunchList.split(",");
 
                 var noNull = arr.filter(item => item);
 
                 if (noNull.length > 3)
-                    $scope.result = "Too much!";
+                    $scope.obj = "Too much!";
                 else
-                    $scope.result = "Enjoy!";
+                    $scope.obj = "Enjoy!";
             }
         };
 

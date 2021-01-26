@@ -19,13 +19,13 @@
         <h1>Lunch Checker</h1>
 
         <div>
-            <input id="lunch-menu" type="text" ng-model="lunchmenu" placeholder="list of dishes (  comma separated ) you want  for lunch" >
+            <input id="lunch-menu" type="text" ng-model="lunchList" placeholder="list of dishes (  comma separated ) you want  for lunch" >
         </div>
         <div>
-            <button  ng-click="splitLunch(lunchmenu)">Check If Too Much</button>
+            <button  ng-click="splitLunch(lunchList)">Check If Too Much</button>
         </div>
         <div>
-            {{result}}
+            {{obj}}
         </div>
     </div>
 
